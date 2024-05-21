@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Pantalones</title>
+    <link rel="shortcut icon" href="../storage/img/favicon.webp" type="image/x-icon">
+
+    <script type="module" src="../js/modules/pantalones.js"></script>
 </head>
 <body>
     <aside>
@@ -32,64 +35,15 @@
         <a href="./carrito.html" class="carrito">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
             <p>Carrito</p>
-            <span>3</span>
+            <span id="cantidadCarrito">0</span>
         </a>
 
         <p id="copy">©2023 Camper</p>
     </aside>
     <main>
         <h1>Pantalones</h1>
-        <div class="PRODUCTOS">
-            <div class="producto">
-                <div class="productoImagen">
-                    <img src="../storage/img/pants1.jpg" alt="">
-                </div>
-                <div class="productoDescripcion">
-                    <p>Pantalon 01</p>
-                    <p>$4.000</p>
-                    <button>Agregar</button>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="productoImagen">
-                    <img src="../storage/img/pants2.jpg" alt="">
-                </div>
-                <div class="productoDescripcion">
-                    <p>Pantalon 02</p>
-                    <p>$5.000</p>
-                    <button>Agregar</button>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="productoImagen">
-                    <img src="../storage/img/pants3.jpg" alt="">
-                </div>
-                <div class="productoDescripcion">
-                    <p>Pantalon 03</p>
-                    <p>$1.500</p>
-                    <button>Agregar</button>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="productoImagen">
-                    <img src="../storage/img/pants4.jpg" alt="">
-                </div>
-                <div class="productoDescripcion">
-                    <p>Pantalon 04</p>
-                    <p>$2.500</p>
-                    <button>Agregar</button>
-                </div>
-            </div>
-            <div class="producto">
-                <div class="productoImagen">
-                    <img src="../storage/img/pants5.jpg" alt="">
-                </div>
-                <div class="productoDescripcion">
-                    <p>Pantalon 05</p>
-                    <p>$2.000</p>
-                    <button>Agregar</button>
-                </div>
-            </div>
+        <div class="PRODUCTOS" id="sectionProduct">
+            
         </div>
 
     </main>

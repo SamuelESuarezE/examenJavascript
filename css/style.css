@@ -8,9 +8,12 @@
     font-family: "Semibold";
 }
 
+
+
 body {
     width: 100vw;
     height: 100vh;
+
     display: grid;
     grid-template-columns: 1fr 4fr;
     align-items: center;
@@ -115,6 +118,7 @@ main {
     border-radius: 50px ;
     gap: 10px;
     overflow-y: scroll;
+    position: relative;
 }
 
 main h1 {
@@ -128,75 +132,7 @@ main h1 {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
-.producto {
-    height: 340px;
-    border-radius: 25px;
-    border: 1px solid var(--color-product);
-    transition: 0.2s;
-    background-color: var(--color-white);
-}
 
-.producto .productoImagen {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    height: 75%;
-}
-
-.producto .productoImagen img {
-    max-height: 100%;
-    object-fit: cover;
-    transition: 0.2s;
-}
-
-.producto:hover {
-    border: none;
-    scale: 1.03;
-    filter: drop-shadow(0px 0px 5px var(--color-product));
-}
-
-.productoDescripcion {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid var(--color-product);
-    padding: 1rem;
-    border-radius: 25px;
-    background-color: var(--color-product);
-    height: 25%;
-    font-size: 1rem;
-    color: var(--color-white);
-}
-
-.productoDescripcion :first-child {
-    font-family: "Black";
-}
-
-.productoDescripcion :nth-child(2) {
-    font-family: "Light";
-}
-
-.productoDescripcion button {
-    position: absolute;
-    background-color: var(--color-gray);
-    color: var(--color-white);
-    border: none;
-    border-radius: 25px;
-    padding-inline: 0.7rem;
-    padding-block: 0.2rem;
-    font-size: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-
-    transition: 0.2s;
-}
-
-.productoDescripcion button:hover {
-    background-color: var(--color-white);
-    color: var(--color-gray);
-    scale: 1.1;
-    cursor: pointer;
-}
 
 .carritoPRODUCTOS {
     display: grid;
@@ -204,64 +140,16 @@ main h1 {
     grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-.carritoProducto {
-    padding: 1vw;
-    display: grid;
-    grid-template-columns: 1.5fr 1.4fr repeat(4, 1fr);
-    grid-template-rows: 1fr;
-    height: 190px;
-    border-radius: 25px;
-    border: 1px solid var(--color-product);
-    transition: 0.2s;
-    background-color: var(--color-white);
-    align-items: center;
-    font-size: 1.7rem;
-}
 
-.carritoProductoImagen {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.carritoProductoImagen img {
-    width: 100%;
-    max-height: 160px;
-    object-fit: contain;
-    transition: 0.2s;
-}
-
-.carritoProducto p:last-child{
-    font-family: "Light";
-}
-
-.carritoProductoCantidad p:last-child {
-    max-width: 100px;
-    max-height: 2rem;
-    overflow: hidden;
-}
-
-.carritoProducto i {
-    display: flex;
-    justify-self: center;
-    font-size: 3.5rem;
-    color: var(--color-vine);
-    transition: 0.2s;
-}
-
-.carritoProducto i:hover {
-    scale: 1.2;
-    cursor: pointer;
-}
 
 .optionsCarrito {
     margin-top: 2%;
     height: 15%;
-    width: 100%;
+    width: 95%;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
 }
 
 .optionsCarrito a, .total button {
@@ -359,40 +247,8 @@ main h1 {
     .carritoPRODUCTOS {
         display: grid;
         gap: 20px;
-        grid-template-rows: repeat(3, minmax(310px, 350px));
+        grid-template-rows: repeat(auto-fill, minmax(310px, 350px));
         height: auto;
-    }
-
-    .carritoProducto {
-        position: relative;
-        padding: 4vw;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        height: 100%;
-        border-radius: 25px;
-        border: 1px solid var(--color-product);
-        transition: 0.2s;
-        background-color: var(--color-white);
-        align-items: center;
-        font-size: 1.3rem;
-    }
-
-    .carritoProducto i {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 2rem;
-    }
-
-    .carritoProducto i:hover {
-        scale: 1;
-        cursor: pointer;
-        
-    }
-
-    .carritoProductoImagen {
-        grid-column: span 2;
     }
 
     .optionsCarrito {
@@ -403,6 +259,8 @@ main h1 {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position:relative;
+        bottom: 0;
     }
     
     .optionsCarrito a, .total button {
